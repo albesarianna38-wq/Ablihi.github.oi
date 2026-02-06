@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+#main-gif {
+    width: 200px;
+    border-radius: 10px;
+}
+
+h1 {
+    color: #d63384;
+    margin: 20px 0;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+button {
+    padding: 10px 25px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+#yesBtn {
+    background-color: #ff4d6d;
+    color: white;
+}
+
+#noBtn {
+    background-color: #6c757d;
+    color: white;
+    position: relative;
+}
+/* Animation for the raining effect */
+.rain-drop {
+    position: fixed;
+    top: -150px; /* Starts above the screen */
+    z-index: 9999;
+    pointer-events: none; /* Allows clicks to go through the images */
+    border-radius: 10px; /* Optional: rounds the corners of the raining pics */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    animation: fall linear forwards;
+}
+@keyframes fall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    100% {
+        transform: translateY(110vh) rotate(360deg); /* Falls past bottom and spins */
+    }
+}
